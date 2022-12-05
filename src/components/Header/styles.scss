@@ -1,15 +1,25 @@
 .header {
 
-  img {
-    display: block;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 125px;
-    height: 125px;
-    margin: 10px auto 25px;
-    border-radius: 125px;
+  .profile {
+    font-size: 32px;
+    background: #fff;
+    padding: 30px 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3em;
+
+    img {
+      display: block;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 125px;
+      height: 125px;
+      margin: 10px auto 25px;
+      border-radius: 125px;
+    }
   }
 
   .money_box {

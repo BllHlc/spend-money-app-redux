@@ -1,0 +1,110 @@
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px 10px;
+
+  .item_wrapper {
+    max-width: 100%;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 15px;
+    width: 100%;
+
+    img {
+      display: block;
+      margin: 15px auto;
+      height: 120px;
+      max-width: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .item_name {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .item_const {
+      font-size: 20px;
+      color: #24c486;
+      font-weight: 700;
+    }
+
+    .item_controls {
+      font-size: 20px;
+      font-weight: 700;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 10px;
+      margin-top: 25px;
+
+      .item_count {
+        padding: 9px 12px;
+        border-radius: 3px;
+        border: 1px solid #b2bec3;
+        color: #333;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 16px;
+        text-align: center;
+        line-height: 10px;
+        height: 38px;
+      }
+
+      .item_count::-webkit-outer-spin-button,
+      .item_count::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .item_sell,
+      .item_buy {
+        cursor: pointer;
+        padding: 10px 12px;
+        border-radius: 3px;
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 16px;
+        text-align: center;
+        line-height: 10px;
+        height: 38px;
+
+        &[disabled] {
+          background: #f1f2f6 !important;
+          border: none;
+          color: #333;
+          cursor: auto;
+          touch-action: manipulation;
+        }
+      }
+
+      .item_sell {
+        background: linear-gradient(180deg, #f53b82, #f53b57);
+      }
+
+      .item_buy {
+        background: linear-gradient(180deg, #2ecc71, #1abc9c);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
