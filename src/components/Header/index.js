@@ -5,18 +5,18 @@ import { moneySelector } from '../../redux/productsSlice';
 import { useSelector } from 'react-redux';
 
 const Header = () => {
-  const money = useSelector(moneySelector);
+  const currentMoney = useSelector(moneySelector);
 
   return (
-    <div className='header'>
+    <>
       <div className='profile'>
         <img src={elon} alt='Elon' />
         <h2 className='text-center fw-bold'>Spend Elon Musk's Money</h2>
       </div>
       <div className='money_box'>
-        ${money ? money.toLocaleString() : 0}
+        ${currentMoney ? currentMoney.toLocaleString() : 0}
       </div>
-    </div>
+    </>
   );
 };
 
